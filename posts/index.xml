@@ -1,0 +1,63 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Joisah Brown</title>
+        <link>https:/JosiahABrown.github.io/posts/</link>
+        <description>Recent content in Posts on Joisah Brown</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Fri, 13 Jan 2023 12:18:10 -0600</lastBuildDate>
+        <atom:link href="https:/JosiahABrown.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Go Basics: Why You Should Learn Go in 2023</title>
+            <link>https:/JosiahABrown.github.io/posts/2023/01/go-basics-why-you-should-learn-go-in-2023/</link>
+            <pubDate>Fri, 13 Jan 2023 12:18:10 -0600</pubDate>
+            
+            <guid>https:/JosiahABrown.github.io/posts/2023/01/go-basics-why-you-should-learn-go-in-2023/</guid>
+            <description>Go, also known as Golang, is a popular programming language developed by Google in 2007. It is known for its simplicity, concurrency support, and efficient memory management.
+Go is a compiled, statically-typed language that is designed to be easy to read and write, while still providing the performance and scalability needed for modern software development.
+One of its unique features is its support for concurrent programming, making it well-suited for tasks such as network servers and distributed systems.</description>
+            <content type="html"><![CDATA[
+    <img src="https://miro.medium.com/max/786/1*9rW7pIsYTEsNxykilW9GoA.webp"  alt="Strong Gopher"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Go, also known as Golang, is a popular programming language developed by Google in 2007. It is known for its simplicity, concurrency support, and efficient memory management.</p>
+<p>Go is a compiled, statically-typed language that is designed to be easy to read and write, while still providing the performance and scalability needed for modern software development.</p>
+<p>One of its unique features is its support for concurrent programming, making it well-suited for tasks such as network servers and distributed systems. Go also has efficient memory management, with a garbage collector and strict type system helping to ensure efficient use of memory. In summary, Go is a powerful language suitable for a wide range of tasks.</p>
+<p>In this blog post, we will explore the basic concepts of Go, including the structure of Go programs, the use of packages and imports, and how to write comments.</p>
+<h2 id="hello-world">Hello World</h2>
+<p>The structure of a Go program is fairly simple. Here is an example of a simple “Hello, World!” program in Go:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>package main</code> line indicates that this is the main package of the program. The <code>import &quot;fmt&quot;</code> line imports the <code>fmt</code> package, which stands for &ldquo;format&rdquo; and provides input and output functionality.</p>
+<p>The <code>func main()</code> function is the entry point of the program, similar to <code>main()</code> in C or <code>public static void main(String[] args)</code> in Java. The <code>fmt.Println</code> function is then called to print the string &ldquo;Hello, World!&rdquo; to the console.</p>
+<h2 id="packages">Packages</h2>
+<p>Go programs are made up of packages, which contain code that can be reused across multiple programs. In addition to the main package, Go has many standard packages that can be imported and used for various tasks. For example, the <code>fmt</code> package, which we imported in the &ldquo;Hello, World!&rdquo; example, provides input and output functionality.</p>
+<p>To import a package, you can use the <code>import</code> statement, like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span></code></pre></div><p>Or if you need multiple packages, enclose them all in parentheses.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span>(
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>After a package has been imported, you can access its exported names (names that start with a capital letter) using the package name, a dot, and the exported name. For example, in the “Hello, World!” example, the <code>Println</code> function is the exported name from the <code>fmt</code> package.</p>
+<p>Remember to capitalize the exported name!</p>
+<h2 id="comments">Comments</h2>
+<p>Every programming language needs comments to explain sections of code or to comment out bits that aren’t needed. Go supports single-line and multi-line comments. Single-line comments start with <code>//</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// This is a single-line comment
+</span></span></span></code></pre></div><p>And then multi-line comments are enclosed in <code>/*</code> and <code>*/</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">/* This is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">a multi-line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">comment */</span>
+</span></span></code></pre></div><hr>
+<p>In this blog post, we have learned about the basic concepts of Go, including the structure of Go programs, the use of packages and imports, and how to write comments. Go is a powerful and popular programming language that is known for its simplicity, concurrency support, and efficient memory management. If you’re interested in learning more about Go, there are many resources available online, including <a href="https://go.dev/doc/">official documentation</a> and online tutorials.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
